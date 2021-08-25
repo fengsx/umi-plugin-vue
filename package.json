@@ -1,0 +1,51 @@
+{
+  "name": "umi-plugin-vuera",
+  "main": "lib/index.js",
+  "version": "1.0.0",
+  "description": "writing vue in umi",
+  "authors": {
+    "name": "fengsx",
+    "email": "fengsx@msn.com"
+  },
+  "repository": "https+git@github.com:fengsx/umi-plugin-vuera.git",
+  "scripts": {
+    "start": "yarn build && cd example && yarn && cd .. && cross-env APP_ROOT=example umi dev",
+    "build": "father-build",
+    "prepublishOnly": "yarn build",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'"
+  },
+  "lint-staged": {
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "git add"
+    ],
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^13.7.7",
+    "father-build": "^1.17.2",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "umi": "~3.3.0",
+    "yorkie": "^2.0.0",
+    "cross-env": "^7.0.3"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "vue": "^2.6.14",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14",
+    "vuera": "^0.2.7",
+    "vue-style-loader": "^4.1.3"
+  }
+}
