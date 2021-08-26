@@ -31,6 +31,13 @@ export default function(api: IApi) {
       .use('vue-style-loader')
       .loader('vue-style-loader');
 
+    memo.resolve.extensions.add('.mjs');
+
+    memo.module
+      .rule('mjs')
+      .test(/\.mjs$/)
+      .type('javascript/auto');
+
     memo.plugin('VueLoaderPlugin').use(VueLoaderPlugin);
 
     return memo;

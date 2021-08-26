@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "vuera": "^0.2.7",
     "element-ui": "^2.15.5"
   }
 }
