@@ -17,6 +17,6 @@ Configure in `.umirc.js`,
 
 ```js
 export default {
-  vue: {},
+  vue2: {},
 };
 ```

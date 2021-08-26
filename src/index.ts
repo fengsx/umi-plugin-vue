@@ -4,7 +4,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 
 export default function(api: IApi) {
   api.describe({
-    key: 'vue',
+    key: 'vue2',
     enableBy: api.EnableBy.config,
     config: {
       default: {
